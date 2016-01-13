@@ -1,0 +1,123 @@
+body, html {
+	font-size:14px;
+}
+h2 {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: .8em;
+	line-height: 1.5em;
+	color: grey;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.logo-item {
+	position: fixed;
+	z-index: 9;
+	height: 3em;
+	padding-top: 1em;
+}
+/*** Menu & Footer ***/
+.menu-btn {
+	cursor: pointer;
+}
+.pac-menu {
+	background: white;
+	padding: .5em 0 1em 3em;
+}
+.child-menu {
+	display: none;
+	border: 1px solid;
+	border-width: 0 0 1px 0;
+	background: white;
+	padding-top: .5em;
+}
+.sub-child-menu {
+	display: none;
+}
+/*.child-menu.open.pac-menu {
+	border: 1px solid;
+	border-width: 0 0 1px 0;
+}*/
+/*.child-menu,
+.sub-child-menu {
+	max-height: 0;
+	overflow: hidden;
+}*/
+/*.child-menu.open,
+.sub-child-menu.open {
+	max-height: 22ex;
+}*/
+.menu-item,
+.footer-item,
+.menu-search-item { text-transform: uppercase; }
+
+.menu-item a,
+.footer-item a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+
+.menu-item a,
+.footer-item a {
+	border: 1px solid;
+}
+
+.menu-wrapper {
+	/*position: fixed;*/
+	width: 100%;
+	z-index:2;
+}
+
+.pac-content-padding {
+    /*padding-top: 13.5em;*/
+    padding-bottom: 6em;
+}
+
+
+
+.banner-main {
+	height: 30vh;
+	font-size: 2em;
+    font-weight: 500;
+	background: url(../images/gallery/image-0.png) center no-repeat;
+	background-size: cover; 
+}
+.banner-secondary {
+	height: 30vh;
+	background: grey;
+	/*background-size: cover; */
+}
+
+
+/*** Icons & images ***/
+/*.bb-logo {
+	background: url(../images/bb-logo.jpg) top no-repeat;
+
+}*/
+
+.sample-image {
+	background: url(../images/gallery/image-5.jpg) center no-repeat;
+}
+
+
+
+/****************************
+MEDIA QUERIES
+****************************/
+
+@media (max-width: 768px) {
+	
+}
+
+/*** TABLETS ***/
+@media (max-width: 414px) {
+	.pac-menu {
+		padding: 0;
+	}
+}
