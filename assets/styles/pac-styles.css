@@ -27,7 +27,7 @@ h3 {
 }
 .pac-menu {
 	background: white;
-	padding: .5em 0 1em 3em;
+	padding: .5em 1em 1em 4em;
 }
 .child-menu {
 	display: none;
@@ -94,6 +94,29 @@ h3 {
 	/*background-size: cover; */
 }
 
+.pac-grid1-container {
+
+}
+.pac-grid1-item {
+	background-size: contain !important;
+	background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pac-grid1-hidden-text {
+	position: relative;
+	z-index: 2;
+	opacity: 0;
+}
+.pac-grid1-hidden-text:hover {
+	position: relative;
+	z-index: 2;
+	opacity: 1;
+}
+.pac-img-grid-text-quote {
+	font-size: 1.33em;
+}
+
 
 /*** Icons & images ***/
 /*.bb-logo {
@@ -102,7 +125,31 @@ h3 {
 }*/
 
 .sample-image {
-	background: url(../images/gallery/image-5.jpg) center no-repeat;
+	background-image: url(../images/gallery/image-5.jpg);
+}
+.sample-image-0 {
+	background-image: url(../images/gallery/img-mock-00.png);
+}
+.sample-image-1 {
+	background-image: url(../images/gallery/img-mock-01.png);
+}
+.sample-image-2 {
+	background-image: url(../images/gallery/img-mock-02.png);
+}
+.sample-image-3 {
+	background-image: url(../images/gallery/img-mock-03.png);
+}
+.sample-image-4 {
+	background-image: url(../images/gallery/img-mock-04.png);
+}
+.sample-image-5 {
+	background-image: url(../images/gallery/img-mock-05.png);
+}
+.sample-image-6 {
+	background-image: url(../images/gallery/img-mock-06.png);
+}
+.sample-image-7 {
+	background-image: url(../images/gallery/img-mock-07.png);
 }
 
 
