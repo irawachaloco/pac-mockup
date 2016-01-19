@@ -110,6 +110,12 @@ FLEX MODULE
 	-webkit-justify-content: space-between;
   	justify-content: space-between;
 }
+.flex_justify-start {
+	justify-content: flex-end;
+}
+.flex_justify-end {
+	justify-content: flex-end;
+}
 /*** Align ***/
 .flex_stretch {
 	-webkit-align-items: stretch;
@@ -512,14 +518,14 @@ input[type=text] {
     border-radius: 0;
 }
 input[type=text]:focus {
-	border-color:red;
+	border-color:cadetblue;
 	outline: 5px;
-	outline-color:red;
+	outline-color:cadetblue;
 }
 
 input[type=submit] {
 	/*padding:5px 15px;*/
-	background:#ccc;
+	/*background:#ccc;*/
 	border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;

@@ -5,7 +5,7 @@ jQuery(function(){
   initScrollMagic();
   dropdownMenu();
   mobileMenuButton();
-  lastOdd();
+  searchInput();
 });
 
 function initScrollMagic() {
@@ -40,8 +40,12 @@ function dropdownMenu() {
 	});
 }
 
-function lastOdd() {
-	$(".square-item-25test:even").filter(":last").css({"background":"red"}); 
+function searchInput() {
+	$(".search-form").hide();
+	$(".show-search-btn").click(function(e){
+		$(this).toggleClass("active");
+		$(".search-form").animate({width: 'toggle'});
+	});
 }
 
 

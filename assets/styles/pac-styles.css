@@ -16,6 +16,8 @@ h3 {
 }
 a { text-decoration: none;}
 
+
+
 .logo-item {
 	position: fixed;
 	z-index: 9;
@@ -76,10 +78,52 @@ a { text-decoration: none;}
 }
 
 .menu-wrapper {
-	/*position: fixed;*/
 	width: 100%;
 	z-index:2;
 }
+.search-form {
+	position: relative;
+	z-index: 1;
+}
+.show-search-btn,
+.show-search-btn:before,
+.show-search-btn:after {
+	width: 2em;
+	height: 2em;
+}
+.show-search-btn p {
+	text-indent: -999ex;
+}
+.show-search-btn::before {
+	content: "";
+	position: absolute;
+	background: url(../images/generales/search-icon.svg) center no-repeat;
+	background-size: 70%;
+}
+.search-form input[type=submit] {
+	background:transparent;
+	text-transform: uppercase;
+	font-size: .8em;
+	-webkit-transform: translate(0, .5em);
+	transform: translate(0, .5em);
+}
+.search-form input[type="text"] {
+    padding: .2em;
+}
+.search-form input[type=submit]:hover {
+	text-decoration: underline;
+}
+.search-form::after {
+	content: "";
+	position: absolute;
+	background:transparent;
+	width: 2em;
+
+}
+
+
+
+
 
 .pac-content-padding {
     /*padding-top: 13.5em;*/
