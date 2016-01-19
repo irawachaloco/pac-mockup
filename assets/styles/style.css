@@ -769,12 +769,15 @@ MEDIA QUERIES
 @media (max-width: 1040px) {
 	.mobile-menu-btn {
 		display: block;
+		margin-top: .5em;
+		margin-right: .5em;
 	}
 	.menu {
      	display: inline-block; 
 		max-height: 0;
     	overflow: hidden;
-    	margin-top: 2.5em;
+    	/*margin-top: 2.5em;*/
+    	padding-top: 2.75em;
 	}
 	.menu.open {
 		max-height: 20em;

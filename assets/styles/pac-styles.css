@@ -14,12 +14,13 @@ h3 {
 	font-weight: normal;
 	text-transform: uppercase;
 }
+a { text-decoration: none;}
 
 .logo-item {
 	position: fixed;
 	z-index: 9;
 	height: 3em;
-	padding-top: 1em;
+	margin-top: .5em;
 }
 /*** Menu & Footer ***/
 .menu-btn {
@@ -27,8 +28,14 @@ h3 {
 }
 .pac-menu {
 	background: white;
-	padding: .5em 1em 1em 4em;
+	/*padding: .5em 1em 1em .5em;*/
 }
+.pac-menu > div {
+    padding: .5em 1em .5em 3.5em;
+}
+/*.pac-menu div {
+	padding: .5em 1em 1em .5em;
+}*/
 .child-menu {
 	display: none;
 	border: 1px solid;
@@ -153,18 +160,112 @@ h3 {
 }
 
 
+/*TEST*/
+.grid {
+
+}
+.square-25test {
+	position: relative;
+	width: 24%;
+	height: 24vmax;
+	overflow: hidden;
+	max-width: 300px;
+	max-height: 300px;
+	margin-bottom: 1vmax;
+	margin-right: 1.333%;
+}
+
+.square-content {
+	position: absolute;
+	width:100%;
+	height: 100%;
+  
+}
+/*.square-25test:last-child:nth-child(odd) {
+	margin-right: auto;
+	margin-left: 1vmax;
+}*/
+.square-25test:nth-child(4n) {
+	margin-right: 0;
+	margin-left: unset;
+}
+.img-bkgd-contain {
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+  z-index: 0;
+}
+.text-content {
+	padding: 1em;
+	position: relative;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+
+.text-hidden{
+	position: absolute;
+	font-weight: 600;
+	line-height: 1.5em;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	opacity: 0;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.text-hidden:hover {
+	opacity: 1;
+}
+
 
 /****************************
 MEDIA QUERIES
 ****************************/
 
+@media (max-width: 1040px) {
+	.logo-item {
+		height: 2em;
+	}
+	.pac-menu > div {
+	    padding: 0.5em 1em 0.5em .5em;
+	}
+
+}
 @media (max-width: 768px) {
-	
+	.pac-menu > div {
+	    padding: 0.5em 1em 1em .5em;
+	}
+	.logo-item {
+		position: fixed;
+		z-index: 9;
+		height: 2em;
+
+	}
+	.square-25test {
+		width: 49%;
+		height: 49vmin;
+		max-width: none;
+		max-height: none;
+		margin-bottom: 1.333vmax;
+		margin-right: unset;
+	}
+	/*.square-25test:nth-child(2n) {
+		margin-left: .333vmax;
+		margin-right: 0vmax;
+	}*/
+	.grid {
+		justify-content: space-between;
+	}
 }
 
 /*** TABLETS ***/
 @media (max-width: 414px) {
-	.pac-menu {
-		padding: 0;
+	.square-25test {
+		width: 100%;
+		height: 100vmin;
 	}
 }

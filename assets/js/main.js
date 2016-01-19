@@ -5,6 +5,7 @@ jQuery(function(){
   initScrollMagic();
   dropdownMenu();
   mobileMenuButton();
+  lastOdd();
 });
 
 function initScrollMagic() {
@@ -37,6 +38,10 @@ function dropdownMenu() {
 		//alert('rana');
 		$('.child-menu').slideToggle();
 	});
+}
+
+function lastOdd() {
+	$(".square-item-25test:even").filter(":last").css({"background":"red"}); 
 }
 
 
