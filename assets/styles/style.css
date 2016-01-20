@@ -365,12 +365,14 @@ BOXED CONTENTS
 .padding-3 { padding: 3em; }
 .padding-4 { padding: 4em; }
 
-.side-padding-half {
-	padding: 0 .5em;
-}
-.side-padding-1 {
-	padding: 0 1em;
-}
+.side-padding-half { padding-right: .5em; padding-left: .5em; }
+.side-padding-1 { padding-right: .5em; padding-left: 1em; }
+.side-padding-2 { padding-right: .5em; padding-left: 2em; }
+.side-padding-3 { padding-right: .5em; padding-left: 3em; }
+.side-padding-4 { padding-right: .5em; padding-left: 4em; }
+.side-padding-5 { padding-right: .5em; padding-left: 5em; }
+.side-padding-6 { padding-right: .5em; padding-left: 6em; }
+
 
 .up-down-padding-half { padding: 0.5em 0; }
 .up-down-padding-1 { padding: 1em 0; }
