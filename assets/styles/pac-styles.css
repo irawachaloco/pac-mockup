@@ -34,7 +34,7 @@ a { text-decoration: none;}
 	position: relative;
 	background: white;
 	/*margin: .5em 0;*/
-	padding: .5em .5em .5em 3.75em;
+	padding: .5em .5em 1.5em 3.75em;
 }
 .side-menu {
 	-webkit-justify-content: flex-end;
