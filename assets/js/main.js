@@ -22,6 +22,7 @@ function initScrollMagic() {
 	})
 	.setPin(".menu-wrapper")
 	.addTo(controller);
+	
 
 }
 

@@ -34,7 +34,7 @@ a { text-decoration: none;}
 	position: relative;
 	background: white;
 	/*margin: .5em 0;*/
-	padding: .5em .5em 1.5em 3.75em;
+	padding: .5em .5em 1.5em 3.5em;
 }
 .side-menu {
 	-webkit-justify-content: flex-end;
@@ -326,7 +326,7 @@ MEDIA QUERIES
 		padding-top: .5em;
 	}
 	.pac-menu {
-		padding: 2.75em 0.5em 0.5em 1em;
+		padding: 2.75em 0.5em 0.5em .5em;
 	}
 	.child-menu.pac-menu {
 	    padding: 0 0.5em 0.5em 1em;
