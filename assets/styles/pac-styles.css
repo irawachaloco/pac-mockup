@@ -1,5 +1,5 @@
 body, html {
-	font-size:14px;
+	font-size:16px;
 	letter-spacing: .075em;
 }
 h2 {
@@ -84,7 +84,7 @@ a { text-decoration: none;}
 	
 }
 
-.main-menu .menu-item a {
+.main-menu-item .menu-item a {
 	border: 2px solid;
 }
 
@@ -318,11 +318,18 @@ MEDIA QUERIES
 		margin-right: .5em;
 	}
 	.menu{
-     	display: none;
+     	/*display: none;*/
     	padding-top: 2.75em;
 	}
+	.main-menu .menu-container {
+		display: none;
+		padding-top: .5em;
+	}
 	.pac-menu {
-		padding: 3.5em 0.5em 0.5em 1em;
+		padding: 2.75em 0.5em 0.5em 1em;
+	}
+	.child-menu.pac-menu {
+	    padding: 0 0.5em 0.5em 1em;
 	}
 	.side-menu {
 	    -webkit-justify-content: initial;
@@ -332,7 +339,7 @@ MEDIA QUERIES
 		-webkit-align-self: flex-end;
 		align-self: flex-end;
 	}
-	.main-menu .menu-item {
+	.main-menu-item .menu-item {
 		padding-bottom: .25em;
 	}
 
@@ -373,7 +380,7 @@ MEDIA QUERIES
 
 /*** TABLETS ***/
 @media (max-width: 414px) {
-	.menu-container {
+	.menu-container > div{
 		flex-flow: column wrap;
 		flex-direction: column-reverse;
 		/*margin: 2.8em 0;
@@ -382,7 +389,9 @@ MEDIA QUERIES
 	    /*-webkit-transform: translate(0, 1px);
 	    transform: translate(0, 1px);*/
 	}
-
+	.child-menu.pac-menu {
+	    padding: 0em 0.5em 0.5em 1em;
+	}
 	.side-menu {
 		-webkit-align-self: flex-end;
 		align-self: flex-end;

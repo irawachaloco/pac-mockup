@@ -780,12 +780,12 @@ MEDIA QUERIES
 ****************************/
 
 @media (max-width: 1040px) {
-	/*.mobile-menu-btn {
+	.mobile-menu-btn {
 		display: block;
 		margin-top: .5em;
 		margin-right: .5em;
 	}
-	.menu{
+	/*.menu{
      	display: none;
     	padding-top: 2.75em;
 	}*/
@@ -799,9 +799,9 @@ MEDIA QUERIES
    		/*-webkit-flex: 0;
    		flex: 0;*/
 	}
-	.mobile-hide {
+	/*.mobile-hide {
 		display: none:;
-	}
+	}*/
 }
 
 /*** TABLETS ***/

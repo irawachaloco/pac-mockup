@@ -28,7 +28,8 @@ function initScrollMagic() {
 function mobileMenuButton() {
 	$(".mobile-menu-btn").click(function(e){
 		e.preventDefault();
-		$(this).next(".pac-menu").slideToggle();
+		$(this).next(".pac-menu").children(".menu-container").slideToggle();
+		$('.child-menu').slideUp();
 	});
 }
 
