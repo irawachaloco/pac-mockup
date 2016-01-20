@@ -1,5 +1,6 @@
 body, html {
 	font-size:14px;
+	letter-spacing: .075em;
 }
 h2 {
 	font-size: 1em;
@@ -29,6 +30,7 @@ a { text-decoration: none;}
 	cursor: pointer;
 }
 .pac-menu {
+	position: relative;
 	background: white;
 	/*padding: .5em 1em 1em .5em;*/
 }
@@ -41,7 +43,7 @@ a { text-decoration: none;}
 .child-menu {
 	display: none;
 	border: 1px solid;
-	border-width: 0 0 1px 0;
+	border-width: 0 0 4px 0;
 	background: white;
 	padding-top: .5em;
 }
@@ -61,8 +63,7 @@ a { text-decoration: none;}
 .sub-child-menu.open {
 	max-height: 22ex;
 }*/
-.menu-item,
-.footer-item,
+.main-menu .menu-item,
 .menu-search-item { text-transform: uppercase; }
 
 .menu-item a,
@@ -72,8 +73,7 @@ a { text-decoration: none;}
 }
 
 
-.menu-item a,
-.footer-item a {
+.main-menu .menu-item a {
 	border: 1px solid;
 }
 
@@ -118,30 +118,50 @@ a { text-decoration: none;}
 	position: absolute;
 	background:transparent;
 	width: 2em;
-
+}
+.secondary-menu .menu-item {
+	font-weight: 600;
 }
 
-
-
-
+.footer nav {
+	padding: 1em 5em 2em;
+}
+.footer-item {
+	font-size: .8em;
+}
+.footer-title {
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-bottom: .75em;
+}
+.footer input[type="text"] {
+	margin-bottom: 3pt;
+}
+.footer input[type="text"]:last-child {
+	margin-bottom: 0;
+}
+.footer-abstract { padding-top: 2.75em; }
 
 .pac-content-padding {
-    /*padding-top: 13.5em;*/
     padding-bottom: 6em;
 }
 
-
-
-.banner-main {
+.banner-main,
+.banner-secondary {
 	height: 30vh;
 	font-size: 2em;
-    font-weight: 500;
+    font-weight: 500; 
+}
+
+.banner-main {
 	background: url(../images/gallery/image-0.png) center no-repeat;
 	background-size: cover; 
 }
 .banner-secondary {
 	height: 30vh;
 	background: grey;
+	color: white;
 	/*background-size: cover; */
 }
 
@@ -287,13 +307,17 @@ MEDIA QUERIES
 		position: fixed;
 		z-index: 9;
 		height: 2em;
-
+	}
+	.main-menu .menu-item {
+		padding-bottom: .25em;
+	}
+	.side-menu div {
+		align-self: flex-end;
 	}
 	.square-25test {
 		width: 49%;
 		height: 49vmin;
-		max-width: none;
-		max-height: none;
+
 		margin-bottom: 1.333vmax;
 		margin-right: unset;
 	}
@@ -302,7 +326,7 @@ MEDIA QUERIES
 		margin-right: 0vmax;
 	}*/
 	.grid {
-		justify-content: space-between;
+		justify-content: center;
 	}
 }
 
@@ -312,4 +336,11 @@ MEDIA QUERIES
 		width: 100%;
 		height: 100vmin;
 	}
+	.footer nav {
+	    padding: 1em 1em 2em;
+	}
+	.footer-item {
+		padding-bottom: 2.5em;
+	}
+
 }

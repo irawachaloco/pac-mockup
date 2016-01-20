@@ -20,7 +20,7 @@ HEADER & FOOTER
 }
 .menu {
     width: 100%;
-    z-index: 99;
+    z-index: 1;
 }
 .logo-item  {
     background: url(../images/generales/logo.svg) center no-repeat;
@@ -40,6 +40,7 @@ HEADER & FOOTER
     width: 2em;
     background: black;
     box-shadow: inset 0px 5px 0px 0px black, inset 0px 10px 0px 0px white, inset 0px 15px 0px 0px black, inset 0px 20px 0px 0px white;
+    z-index: 99;
 }
 
 .logo-item > a {
@@ -364,6 +365,9 @@ BOXED CONTENTS
 .padding-3 { padding: 3em; }
 .padding-4 { padding: 4em; }
 
+.side-padding-half {
+	padding: 0 .5em;
+}
 .side-padding-1 {
 	padding: 0 1em;
 }
@@ -424,6 +428,7 @@ BOXED CONTENTS
 
 
 .max-w-10e { max-width: 10em; }
+.max-w-15e { max-width: 15em; }
 .max-w-20e { max-width: 20em; }
 .max-w-30e { max-width: 30em; }
 .max-w-40e { max-width: 40em; }
@@ -525,7 +530,7 @@ input[type=text]:focus {
 
 input[type=submit] {
 	/*padding:5px 15px;*/
-	/*background:#ccc;*/
+	background:#ccc;
 	border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
@@ -778,7 +783,7 @@ MEDIA QUERIES
 		margin-top: .5em;
 		margin-right: .5em;
 	}
-	.menu {
+	.menu{
      	display: inline-block; 
 		max-height: 0;
     	overflow: hidden;
@@ -792,8 +797,8 @@ MEDIA QUERIES
 	.mobile-column-wrap {
 		-webkit-flex-flow: column wrap;
    		flex-flow: column wrap;
-   		-webkit-flex: 0;
-   		flex: 0;
+   		/*-webkit-flex: 0;
+   		flex: 0;*/
 	}
 	.mobile-hide {
 		display: none:;
