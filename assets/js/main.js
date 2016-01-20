@@ -6,6 +6,7 @@ jQuery(function(){
   dropdownMenu();
   mobileMenuButton();
   searchInput();
+  initSlick();
 });
 
 function initScrollMagic() {
@@ -50,6 +51,56 @@ function searchInput() {
 	});
 }
 
+//init initSlick
+function initSlick() {	
+	if(($(".slider").length > 0)){
+			$(".slider").slick({
+				slide:'.slide-item',
+			    slidesToShow: 1,
+				//slidesToScroll: 1,
+				 //variableWidth: true,
+				 arrows: true,
+				 dots: true,
+				 // centerMode: true,
+				 //centerPadding: 10,
+				 // slide: 'item',
+				 //focusOnSelect: true,
+				 autoplay: false,
+				 //autoplaySpeed: 3000
+				 //adaptiveHeight: true
+				 //variableWidth: true,
+				 //adaptiveHeight: true
+				 infinite: false
+			 //  slidesToShow: 3,
+			 //  slidesToScroll: 1,
+			 	  
+			});
+	}
+	
+}
+
+$(document).ready(function(){
+    $(".slider").slick({
+		slide:'.slide-item',
+	    slidesToShow: 1,
+		//slidesToScroll: 1,
+		 //variableWidth: true,
+		 arrows: false,
+		 dots: true,
+		 // centerMode: true,
+		 //centerPadding: 10,
+		 // slide: 'item',
+		 //focusOnSelect: true,
+		 autoplay: false,
+		 //autoplaySpeed: 3000
+		 //adaptiveHeight: true
+		 //variableWidth: true,
+		 //adaptiveHeight: true
+		 infinite: false
+	 //  slidesToShow: 3,
+	 //  slidesToScroll: 1,
+  });
+});
 
 
 
