@@ -28,7 +28,7 @@ function initScrollMagic() {
 function mobileMenuButton() {
 	$(".mobile-menu-btn").click(function(e){
 		e.preventDefault();
-		$(this).next().toggleClass("open");
+		$(this).next(".pac-menu").slideToggle();
 	});
 }
 

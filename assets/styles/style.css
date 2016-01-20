@@ -780,21 +780,18 @@ MEDIA QUERIES
 ****************************/
 
 @media (max-width: 1040px) {
-	.mobile-menu-btn {
+	/*.mobile-menu-btn {
 		display: block;
 		margin-top: .5em;
 		margin-right: .5em;
 	}
 	.menu{
-     	display: inline-block; 
-		max-height: 0;
-    	overflow: hidden;
-    	/*margin-top: 2.5em;*/
+     	display: none;
     	padding-top: 2.75em;
-	}
-	.menu.open {
+	}*/
+	/*.menu.open {
 		max-height: 20em;
-	}
+	}*/
 
 	.mobile-column-wrap {
 		-webkit-flex-flow: column wrap;

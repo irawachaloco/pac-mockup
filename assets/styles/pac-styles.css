@@ -22,6 +22,7 @@ a { text-decoration: none;}
 .logo-item {
 	position: fixed;
 	z-index: 9;
+	width: 3em;
 	height: 3em;
 	margin-top: .5em;
 }
@@ -32,11 +33,16 @@ a { text-decoration: none;}
 .pac-menu {
 	position: relative;
 	background: white;
-	/*padding: .5em 1em 1em .5em;*/
+	/*margin: .5em 0;*/
+	padding: .5em .5em .5em 3.75em;
 }
-.pac-menu > div {
+.side-menu {
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+/*.pac-menu > div {
     padding: .5em 1em .5em 3.5em;
-}
+}*/
 /*.pac-menu div {
 	padding: .5em 1em 1em .5em;
 }*/
@@ -63,15 +69,20 @@ a { text-decoration: none;}
 .sub-child-menu.open {
 	max-height: 22ex;
 }*/
-.main-menu .menu-item,
-.menu-search-item { text-transform: capitalize; }
+.menu-item a,
+.menu-search-item { 
+	text-transform: capitalize;
+	font-weight: 600;
+}
 
 .menu-item a,
 .footer-item a {
 	display: inline-block;
 	text-decoration: none;
 }
-
+.child-menu .menu-item {
+	
+}
 
 .main-menu .menu-item a {
 	border: 2px solid;
@@ -301,26 +312,49 @@ MEDIA QUERIES
 	.logo-item {
 		height: 2em;
 	}
-	.pac-menu > div {
-	    padding: 0.5em 1em 0.5em .5em;
+	.mobile-menu-btn {
+		display: block;
+		margin-top: .5em;
+		margin-right: .5em;
 	}
+	.menu{
+     	display: none;
+    	padding-top: 2.75em;
+	}
+	.pac-menu {
+		padding: 3.5em 0.5em 0.5em 1em;
+	}
+	.side-menu {
+	    -webkit-justify-content: initial;
+	    justify-content: initial;
+	}
+	.side-menu div {
+		-webkit-align-self: flex-end;
+		align-self: flex-end;
+	}
+	.main-menu .menu-item {
+		padding-bottom: .25em;
+	}
+
 
 }
 @media (max-width: 768px) {
-	.pac-menu > div {
-	    padding: 0.5em 1em 1em .5em;
+	.pac-menu {
+		/*margin: 2.8em 0;
+		padding: .5em;*/
+	    /*padding: 3.75em .5em .05em;*/
+	    /*-webkit-transform: translate(0, 1px);
+	    transform: translate(0, 1px);*/
 	}
 	.logo-item {
 		position: fixed;
 		z-index: 9;
 		height: 2em;
 	}
-	.main-menu .menu-item {
-		padding-bottom: .25em;
-	}
-	.side-menu div {
-		align-self: flex-end;
-	}
+	/*.side-menu div {
+	    align-self: auto;
+	}*/
+	
 	.square-25test {
 		width: 49%;
 		height: 49vmin;
@@ -339,6 +373,25 @@ MEDIA QUERIES
 
 /*** TABLETS ***/
 @media (max-width: 414px) {
+	.menu-container {
+		flex-flow: column wrap;
+		flex-direction: column-reverse;
+		/*margin: 2.8em 0;
+		padding: .5em;*/
+	    /*padding: 3.75em .5em .05em;*/
+	    /*-webkit-transform: translate(0, 1px);
+	    transform: translate(0, 1px);*/
+	}
+
+	.side-menu {
+		-webkit-align-self: flex-end;
+		align-self: flex-end;
+		-webkit-justify-content: unset;
+		justify-content: unset;
+	}
+	.secondary-options {
+		display: none;
+	}
 	.square-25test {
 		width: 100%;
 		height: 100vmin;
