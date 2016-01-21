@@ -171,6 +171,7 @@ FLEX MODULE
    		    flex: 2 0 0;
 }
 .flex-1 { flex:1; }
+.flex-1andHalf { flex:1.5; }
 .flex-2 { flex:2; }
 .flex-3 { flex:3; }
 .flex-4 { flex:4; }
@@ -208,7 +209,9 @@ p:empty, span:empty { display: none; }
 }
 /*** Font ***/
 .helvetica { font-family: Helvetica, sans-serif; }
+.times { font-family: Times, serif; }
 .upper { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
 .italic { font-style: italic; }
 .underline { text-decoration: underline; }
 .text_align-center { text-align: center; }
