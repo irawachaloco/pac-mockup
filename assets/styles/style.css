@@ -353,6 +353,10 @@ BOXED CONTENTS
 .right-padding-2 { padding-right: 2em; }
 .right-padding-3 { padding-right: 3em; }
 .right-padding-4 { padding-right: 4em; }
+.right-padding-5 { padding-right: 5em; }
+.right-padding-6 { padding-right: 6em; }
+.right-padding-7 { padding-right: 7em; }
+
 
 .left-padding-half { padding-left: .5em; }
 .left-padding-1 { padding-left: 1em; }
@@ -369,12 +373,12 @@ BOXED CONTENTS
 .padding-4 { padding: 4em; }
 
 .side-padding-half { padding-right: .5em; padding-left: .5em; }
-.side-padding-1 { padding-right: .5em; padding-left: 1em; }
-.side-padding-2 { padding-right: .5em; padding-left: 2em; }
-.side-padding-3 { padding-right: .5em; padding-left: 3em; }
-.side-padding-4 { padding-right: .5em; padding-left: 4em; }
-.side-padding-5 { padding-right: .5em; padding-left: 5em; }
-.side-padding-6 { padding-right: .5em; padding-left: 6em; }
+.side-padding-1 { padding-right: 1em; padding-left: 1em; }
+.side-padding-2 { padding-right: 2em; padding-left: 2em; }
+.side-padding-3 { padding-right: 3em; padding-left: 3em; }
+.side-padding-4 { padding-right: 4em; padding-left: 4em; }
+.side-padding-5 { padding-right: 5em; padding-left: 5em; }
+.side-padding-6 { padding-right: 6em; padding-left: 6em; }
 
 
 .up-down-padding-half { padding: 0.5em 0; }
@@ -449,6 +453,70 @@ GRIDS
 ****************************/
 
 /*** Squares ***/
+
+.grid {
+
+}
+.square-25 {
+	position: relative;
+	width: 24%;
+	height: 24vmax;
+	overflow: hidden;
+	max-width: 300px;
+	max-height: 300px;
+	margin-bottom: 1vmax;
+	margin-right: 1.333%;
+}
+
+.square-content {
+	position: absolute;
+	width:100%;
+	height: 100%;
+  
+}
+.square-25:nth-child(4n) {
+	margin-right: 0;
+	margin-left: unset;
+}
+.square-img-bkgd-contain {
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+  z-index: 0;
+}
+.square-text-content {
+	padding: 1em;
+	position: relative;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+
+.square-text-hidden {
+	position: absolute;
+	font-weight: 600;
+	line-height: 1.5em;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	opacity: 0;
+	box-sizing: border-box;
+	z-index: 1;
+}
+.square-text-hidden:hover {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
 /*.square-25 {
 	position: relative;
 	width:  calc(25vw - 4em);
@@ -457,7 +525,7 @@ GRIDS
 	max-height: 300px;
 }*/
 
-.square-25 {
+/*.square-25 {
 	position: relative;
 	width: 25%;
 	
@@ -468,17 +536,17 @@ GRIDS
 	width:  100%;
 	
 	padding-bottom: 100%;
-}
+}*/
 
 /*.square-25:nth-of-type(4n+4) {
 	margin-right:0;
 	padding-right:0;
 }*/
 
-.square-padding-1 {
+/*.square-padding-1 {
 	padding: 0 1em 1em 0;
 	box-sizing: border-box;
-}
+}*/
 
 
 
@@ -788,26 +856,30 @@ MEDIA QUERIES
 		margin-top: .5em;
 		margin-right: .5em;
 	}
-	/*.menu{
-     	display: none;
-    	padding-top: 2.75em;
-	}*/
-	/*.menu.open {
-		max-height: 20em;
-	}*/
-
-	.mobile-column-wrap {
+	.column-trigger-1040 {
 		-webkit-flex-flow: column wrap;
    		flex-flow: column wrap;
-   		/*-webkit-flex: 0;
-   		flex: 0;*/
 	}
-	/*.mobile-hide {
-		display: none:;
-	}*/
+	.column-reverse-trigger-1040 {
+		-webkit-flex-flow: column-reverse wrap;
+   		flex-flow: column-reverse wrap;
+	}
+	.justify-center-trigger-1040 {
+		-webkit-justify-content: center;
+	  	justify-content: center;	
+	}
+	.square-25:nth-child(4n) {
+		margin-bottom: 1vmax;
+		margin-right: 1.333%;;
+	}
+	.square-25:nth-child(3n) {
+		margin-right: 0;
+		margin-left: unset;
+	}
+		
 }
-
 /*** TABLETS ***/
+/* landscape */
 @media (max-width: 1024px) {
   .square-25 {
         position: relative;
@@ -817,6 +889,32 @@ MEDIA QUERIES
     max-height: 300px
   }
 }
+/* portrait */
+@media (max-width: 768px) {
+	.column-trigger-768 {
+		-webkit-flex-flow: column wrap;
+   		flex-flow: column wrap;
+	}
+	.square-25test {
+		width: 49%;
+		height: 49vmin;
+		margin-bottom: 1.333vmax;
+		margin-right: unset;
+	}
+}
+/*** PHONES ***/
+@media (max-width: 414px) {
+	.column-trigger-414 {
+		-webkit-flex-flow: column wrap;
+   		flex-flow: column wrap;
+	}
+	.square-25 {
+		width: 100%;
+		height: 100vmin;
+	}
+}
+
+
 
 
 

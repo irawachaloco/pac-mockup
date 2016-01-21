@@ -65,25 +65,31 @@ function initSlick() {
 			});
 
 			$slickElement.slick({
-			    slide:'.slide-item',
-			    slidesToShow: 1,
-			    adaptiveHeight: false,
+				slide:'.slide-item',
+				slidesToShow: 1,
+				adaptiveHeight: false,
 				//slidesToScroll: 1,
 				 //variableWidth: true,
-				 arrows: true,
-				 dots: false,
-				 // centerMode: true,
-				 //centerPadding: 10,
-				 // slide: 'item',
-				 //focusOnSelect: true,
-				 autoplay: false,
-				 //autoplaySpeed: 3000
-				 //adaptiveHeight: true
-				 //variableWidth: true,
-				 //adaptiveHeight: true
-				 infinite: false
-			 //  slidesToShow: 3,
-			 //  slidesToScroll: 1,
+				arrows: true,
+				dots: false,
+				// centerMode: true,
+				//centerPadding: 10,
+				// slide: 'item',
+				//focusOnSelect: true,
+				autoplay: false,
+				//autoplaySpeed: 3000
+				//adaptiveHeight: true
+				//variableWidth: true,
+				//adaptiveHeight: true
+				infinite: false,
+				responsive: [
+				{
+				  breakpoint: 414,
+				  settings: {
+				    arrows: false
+				  }
+				}
+				]
 			});
 	}
 	

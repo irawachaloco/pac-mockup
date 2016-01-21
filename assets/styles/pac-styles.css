@@ -28,6 +28,12 @@ a { text-decoration: none;}
 	font-family: 'Droid Serif', serif;
 	font-size: .9em;
 }
+.poppins-font {
+	font-family: 'Poppins', sans-serif;
+}
+.source-serif-font {
+	font-family: 'Source Serif Pro', serif;
+}
 
 .logo-item {
 	position: fixed;
@@ -193,6 +199,10 @@ a { text-decoration: none;}
 	/*background-size: cover; */
 }
 
+.square-25 {
+	max-width: 300px;
+	max-height: 300px;
+}
 .pac-grid1-container {
 
 }
@@ -252,109 +262,35 @@ a { text-decoration: none;}
 }
 
 
-/*TEST*/
-.grid {
-
+/*SLIDER*/
+.pac-carrousel-section {
+	padding-right: 3em;
+	padding-left: 3em;
 }
-.square-25test {
-	position: relative;
-	width: 24%;
-	height: 24vmax;
-	overflow: hidden;
-	max-width: 300px;
-	max-height: 300px;
-	margin-bottom: 1vmax;
-	margin-right: 1.333%;
-}
-
-.square-content {
-	position: absolute;
-	width:100%;
-	height: 100%;
-  
-}
-/*.square-25test:last-child:nth-child(odd) {
-	margin-right: auto;
-	margin-left: 1vmax;
-}*/
-.square-25test:nth-child(4n) {
-	margin-right: 0;
-	margin-left: unset;
-}
-.img-bkgd-contain {
-	position:absolute;
-	height: 100%;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-  z-index: 0;
-}
-.text-content {
-	padding: 1em;
-	position: relative;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-
-.text-hidden{
-	position: absolute;
-	font-weight: 600;
-	line-height: 1.5em;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	padding: 1em;
-	opacity: 0;
-	box-sizing: border-box;
-	z-index: 1;
-}
-.text-hidden:hover {
-	opacity: 1;
-}
-
-.pac-slider {
-	/*position: relative;*/
-     /*height: 40vh;*/ 
-     /*width: 100%;*/
-     /*max-height: 40vh;*/
-    /* max-width: 100%;
-     max-height: 30vh; */
-}
-
-.pac-slider-wrapper {
-	/*position: relative;
-	height: 30vh;
-	max-height: 30vh;*/
-}
-.pac-slider .slide-item {
-	/*height: 30vh;
-	width: 100%;
-	background-size: contain;
-	background-repeat: no-repeat;*/
-	/*max-height: 30vh;*/
-}
-.slick-slide,
-.slick-slide img {
-  /* height:30vh;*/
+.pac-slider-section {
+	max-width: 60%;
+	padding-right: 5em;
 }
 .slide-image,
 .side-content-image {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 .slide-image {
-    width: 100%;
+    /*width: 100%;*/
     height: 45vh;
+    background-size: cover;
 }
 .side-content-image {
 	height: 10em;
 	width: 100%;
+	background-size: contain;
 }
 .slide__caption {
 	color: grey;
 	font-size: .8em;
+	
+	margin-top: 1em;
 }
 .pagingInfo {
 	font-size: 1.2em;
@@ -362,100 +298,45 @@ a { text-decoration: none;}
 }
 .cat {
 	text-transform: capitalize;
+	font-size: .9em;
 }
 /*SLICK*/
-/*.slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -moz-user-select: none;
+.slick-next {
+    right: -48px !important;
 }
-.slick-slider {
-    margin-bottom: 30px;
-}
-.slick-slider .slick-track {
-    transform: translate3d(0px, 0px, 0px);
-}
-.slick-track {
-    position: relative;
-    left: 0px;
-    top: 0px;
-    display: block;
-}
-.slick-track::before, .slick-track::after {
-    content: "";
-    display: table;
-}
-.slick-list {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0px;
-    padding: 0px;
-}
-.slick-slide {
-    float: left;
-    height: 100%;
-    min-height: 1px;
-    display: none;
-}
-
 .slick-prev {
-    left: -25px;
+    left: -48px !important;
 }
 .slick-prev, .slick-next {
-    position: absolute;
-    display: block;
-    height: 20px;
-    width: 20px;
-    line-height: 0;
-    font-size: 0px;
-    cursor: pointer;
-    background: transparent none repeat scroll 0% 0%;
-    color: transparent;
-    top: 50%;
-    margin-top: -10px;
-    padding: 0px;
-    border: medium none;
-    outline: medium none;
-}*/
-button {
-    text-transform: uppercase;
-    -moz-appearance: none;
-    border: 1px solid;
-    border-radius: 0px;
-    background: inherit;
+    height: 48px !important;
+    width: 48px !important;
+    margin-top: -24px !important;
 }
-
-
-
 .slick-prev::before, .slick-next::before {
-   /* font-family: "slick";*/
-    font-size: 20px;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 48px !important;
     line-height: 1;
     color: #333 !important;
     opacity: 0.75;
     -moz-osx-font-smoothing: grayscale;
 }
-.slick-prev::before, .slick-next::before {
-   /* font-family: "slick";*/
-    font-size: 20px;
-    line-height: 1;
-    color: #333;
-    opacity: 0.75;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 .slick-next::before {
-    content: "→";
+    content: "›" !important;
 }
 .slick-prev::before {
-    content: "←";
+	content: "‹" !important;
 }
 /****************************
 MEDIA QUERIES
 ****************************/
 
 @media (max-width: 1040px) {
+	.mobile-column-wrap {
+		-webkit-flex-flow: column wrap;
+   		flex-flow: column wrap;
+	}
+
 	.logo-item {
 		height: 2em;
 	}
@@ -465,7 +346,6 @@ MEDIA QUERIES
 		margin-right: .5em;
 	}
 	.menu{
-     	/*display: none;*/
     	padding-top: 2.75em;
 	}
 	.main-menu .menu-container {
@@ -489,37 +369,21 @@ MEDIA QUERIES
 	.main-menu-item .menu-item {
 		padding-bottom: .25em;
 	}
-
-
+	.pac-slider-section {
+	    max-width: 100%;
+	    padding-right: 0;
+	}
+	.pac-side-section {
+		padding-bottom: 3em;
+	}
 }
 @media (max-width: 768px) {
-	.pac-menu {
-		/*margin: 2.8em 0;
-		padding: .5em;*/
-	    /*padding: 3.75em .5em .05em;*/
-	    /*-webkit-transform: translate(0, 1px);
-	    transform: translate(0, 1px);*/
-	}
 	.logo-item {
 		position: fixed;
 		z-index: 9;
 		height: 2em;
 	}
-	/*.side-menu div {
-	    align-self: auto;
-	}*/
 	
-	.square-25test {
-		width: 49%;
-		height: 49vmin;
-
-		margin-bottom: 1.333vmax;
-		margin-right: unset;
-	}
-	/*.square-25test:nth-child(2n) {
-		margin-left: .333vmax;
-		margin-right: 0vmax;
-	}*/
 	.grid {
 		justify-content: center;
 	}
@@ -530,11 +394,6 @@ MEDIA QUERIES
 	.menu-container > div{
 		flex-flow: column wrap;
 		flex-direction: column-reverse;
-		/*margin: 2.8em 0;
-		padding: .5em;*/
-	    /*padding: 3.75em .5em .05em;*/
-	    /*-webkit-transform: translate(0, 1px);
-	    transform: translate(0, 1px);*/
 	}
 	.child-menu.pac-menu {
 	    padding: 0em 0.5em 0.5em 1em;
@@ -548,15 +407,15 @@ MEDIA QUERIES
 	.secondary-options {
 		display: none;
 	}
-	.square-25test {
-		width: 100%;
-		height: 100vmin;
-	}
 	.footer nav {
 	    padding: 1em 1em 2em;
 	}
 	.footer-item {
 		padding-bottom: 2.5em;
+	}
+	.pac-carrousel-section {
+		padding-right: .5em;
+		padding-left: .5em;
 	}
 
 }
