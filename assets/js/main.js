@@ -1,6 +1,3 @@
-
-
-
 jQuery(function(){
   initScrollMagic();
   dropdownMenu();
@@ -9,23 +6,7 @@ jQuery(function(){
   initSlick();
 });
 
-function initScrollMagic() {
 
-	// init ScrollMagic Controller
-	var controller = new ScrollMagic.Controller();
-
-	// Fix-menu Handler
-	var fixMenu = new ScrollMagic.Scene({
-
-		triggerElement: ".menu-wrapper", 
-		triggerHook: 0, 
-		reverse: true, 
-	})
-	.setPin(".menu-wrapper")
-	.addTo(controller);
-	
-
-}
 
 function mobileMenuButton() {
 	$(".mobile-menu-btn").click(function(e){
@@ -38,8 +19,7 @@ function mobileMenuButton() {
 function dropdownMenu() {
 	$(".menu-dropdown").click(function(e){
 		e.preventDefault();
-		//alert('rana');
-		$('.child-menu').slideToggle();
+		$(this).next('.child-menu').slideToggle();
 	});
 }
 
@@ -51,7 +31,23 @@ function searchInput() {
 	});
 }
 
-//init initSlick
+// ======== PLUGINS ========
+
+//ScrollMagic
+function initScrollMagic() {
+	// init controller
+	var controller = new ScrollMagic.Controller();
+	// Fix-menu Handler
+	var fixMenu = new ScrollMagic.Scene({
+		triggerElement: ".menu-wrapper", 
+		triggerHook: 0, 
+		reverse: true, 
+	})
+	.setPin(".menu-wrapper")
+	.addTo(controller);
+}
+
+//SlickSlider
 function initSlick() {	
 	if(($(".pac-slider").length > 0)){
 			
