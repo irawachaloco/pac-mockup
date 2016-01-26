@@ -63,11 +63,18 @@ a { text-decoration: none;}
 	padding: .5em 1em 1em .5em;
 }*/
 .child-menu {
+	position: absolute;
 	display: none;
 	border: 1px solid;
 	border-width: 0 0 2px 0;
 	background: white;
 	padding-top: .5em;
+	width: 100%;
+	left: 0;
+}
+.child-menu  .menu-item{
+	position: relative;
+	z-index: 2;
 }
 .sub-child-menu {
 	display: none;
@@ -85,6 +92,9 @@ a { text-decoration: none;}
 .sub-child-menu.open {
 	max-height: 22ex;
 }*/
+.menu-container {
+	position: relative;
+}
 .menu-item a,
 .menu-search-item { 
 	text-transform: capitalize;
@@ -96,11 +106,9 @@ a { text-decoration: none;}
 	display: inline-block;
 	text-decoration: none;
 }
-.child-menu .menu-item {
-	
-}
 
-.main-menu-item .menu-item a {
+
+.main-menu .menu-btn {
 	border: 2px solid;
 }
 
@@ -155,6 +163,9 @@ a { text-decoration: none;}
 }
 .secondary-menu .menu-item {
 	font-weight: 600;
+}
+.footer {
+	background-color: white;
 }
 
 .footer nav {
@@ -300,6 +311,9 @@ a { text-decoration: none;}
 	text-transform: capitalize;
 	font-size: .9em;
 }
+.fixed-side-section {
+	z-index: -1;
+}
 /*SLICK*/
 .slick-next {
     right: -48px !important;
@@ -366,7 +380,7 @@ MEDIA QUERIES
 		-webkit-align-self: flex-end;
 		align-self: flex-end;
 	}
-	.main-menu-item .menu-item {
+	.main-menu .menu-item {
 		padding-bottom: .25em;
 	}
 	.pac-slider-section {

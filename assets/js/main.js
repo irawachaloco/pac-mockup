@@ -17,9 +17,12 @@ function mobileMenuButton() {
 }
 
 function dropdownMenu() {
-	$(".menu-dropdown").click(function(e){
-		e.preventDefault();
-		$(this).next('.child-menu').slideToggle();
+	$(".menu-btn").click(function(e){
+		if ( $(this).next('.child-menu').length > 0 ) {
+			e.preventDefault();
+			$('.menu-btn').not(this).next('.child-menu').slideUp();
+	    	$(this).next('.child-menu').slideToggle();
+		} 
 	});
 }
 
@@ -40,10 +43,19 @@ function initScrollMagic() {
 	// Fix-menu Handler
 	var fixMenu = new ScrollMagic.Scene({
 		triggerElement: ".menu-wrapper", 
-		triggerHook: 0, 
-		reverse: true, 
+		triggerHook: 0,
+		reverse: true 
 	})
 	.setPin(".menu-wrapper")
+	.addTo(controller);
+
+	var fixSideBar = new ScrollMagic.Scene({
+		triggerElement: ".fixed-side-section", 
+		triggerHook: 0,
+		offset: -67,
+		reverse: true 
+	})
+	.setPin(".fixed-side-section")
 	.addTo(controller);
 }
 
