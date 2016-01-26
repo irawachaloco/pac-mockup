@@ -61,7 +61,8 @@ function initScrollMagic() {
 		reverse: true 
 	})
 	.setPin(".menu-wrapper")
-	.addTo(controller);
+	.addTo(controller)
+
 	if ($( window ).width() >= 1024) {
 	// do some magic
 	var fixSideBar = new ScrollMagic.Scene({
@@ -71,7 +72,7 @@ function initScrollMagic() {
 		reverse: true 
 	})
 	.setPin(".fixed-side-section")
-	.addTo(controller);
+	.addTo(controller)
 	}
 	
 }
