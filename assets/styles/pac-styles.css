@@ -75,8 +75,28 @@ a { text-decoration: none;}
 	width: 100%;
 	left: 0;
 }
+.sub-child-menu {
+	position: absolute;
+	/*display: none;*/
+	border: 2px solid;
+	border-width: 2px 0 2px 0;
+	background: white;
+	padding-top: .5em;
+	width: 100%;
+	left: 0;
+}
+.filter-menu {
+	position: absolute;
+	display: none;
+	border: 1px solid;
+	border-width: 2px 0 0 0;
+	background: lightgrey;
+	padding-top: .5em;
+	width: 100%;
+	left: 0;
+}
 .child-menu  .menu-item{
-	position: relative;
+	/*position: relative;*/
 	z-index: 2;
 }
 .sub-child-menu {

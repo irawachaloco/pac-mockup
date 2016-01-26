@@ -17,6 +17,20 @@ function mobileMenuButton() {
 }
 
 function dropdownMenu() {
+	$(".filter-menu-btn").click(function(e){
+		if ( $(this).next('.filter-menu').length > 0 ) {
+			e.preventDefault();
+			$('.filter-menu-btn').not(this).next('.filter-menu').slideUp();
+	    	$(this).next('.filter-menu').slideToggle();
+		} 
+	});
+	$(".sub-menu-btn").click(function(e){
+		if ( $(this).next('.sub-child-menu').length > 0 ) {
+			e.preventDefault();
+			$('.sub-menu-btn').not(this).next('.sub-child-menu').slideUp();
+	    	$(this).next('.sub-child-menu').slideToggle();
+		} 
+	});
 	$(".menu-btn").click(function(e){
 		if ( $(this).next('.child-menu').length > 0 ) {
 			e.preventDefault();
