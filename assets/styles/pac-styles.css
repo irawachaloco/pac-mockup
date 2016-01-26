@@ -34,6 +34,9 @@ a { text-decoration: none;}
 .source-serif-font {
 	font-family: 'Source Serif Pro', serif;
 }
+.karla-font {
+	font-family: 'Karla', sans-serif;
+}
 
 .logo-item {
 	position: fixed;
@@ -166,6 +169,8 @@ a { text-decoration: none;}
 }
 .footer {
 	background-color: white;
+	position: relative;
+	z-index: 99;
 }
 
 .footer nav {
@@ -278,8 +283,11 @@ a { text-decoration: none;}
 	padding-right: 3em;
 	padding-left: 3em;
 }
-.pac-slider-section {
+.pac-main-column {
 	max-width: 60%;
+	/*padding-right: 5em;*/
+}
+.pac-main-column .column-wrapper {
 	padding-right: 5em;
 }
 .slide-image,
@@ -383,7 +391,7 @@ MEDIA QUERIES
 	.main-menu .menu-item {
 		padding-bottom: .25em;
 	}
-	.pac-slider-section {
+	.pac-main-column {
 	    max-width: 100%;
 	    padding-right: 0;
 	}

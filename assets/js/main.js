@@ -48,7 +48,8 @@ function initScrollMagic() {
 	})
 	.setPin(".menu-wrapper")
 	.addTo(controller);
-
+	if ($( window ).width() >= 1024) {
+	// do some magic
 	var fixSideBar = new ScrollMagic.Scene({
 		triggerElement: ".fixed-side-section", 
 		triggerHook: 0,
@@ -57,6 +58,8 @@ function initScrollMagic() {
 	})
 	.setPin(".fixed-side-section")
 	.addTo(controller);
+	}
+	
 }
 
 //SlickSlider
