@@ -312,7 +312,7 @@ a { text-decoration: none;}
 	font-size: .9em;
 }
 .fixed-side-section {
-	z-index: -1;
+	z-index: ;
 }
 /*SLICK*/
 .slick-next {
