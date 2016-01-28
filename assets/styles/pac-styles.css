@@ -31,8 +31,10 @@ a { text-decoration: none;}
 .poppins-font {
 	font-family: 'Poppins', sans-serif;
 }
-.source-serif-font {
+.source-serif-font,
+.source-serif-font > p {
 	font-family: 'Source Serif Pro', serif;
+	text-align: left;
 }
 .karla-font {
 	font-family: 'Karla', sans-serif;
@@ -81,7 +83,7 @@ a { text-decoration: none;}
 	position: absolute;
 	/*display: none;*/
 	border: 2px solid;
-	border-width: 2px 0 2px 0;
+	border-width: 2px 0 0 0;
 	background: white;
 	padding-top: .5em;
 	width: 100%;
@@ -447,16 +449,20 @@ MEDIA QUERIES
 		padding: 2.75em 0.5em 0.5em .5em;
 	}
 	.child-menu{
+		position: relative;
 	    padding-top: 0.5em;
-	
+		max-height: calc(100vh - 6em);
+		overflow: scroll;
 	}
 
 	.sub-child-menu {
-		/*display: block;*/
+		position: relative;
+		display: block;
+
 		/*height: 100%;*/
 	}
-	.child-menu {
-		position: relative;
+	.filter-menu {
+		display: none;
 	}
 	.side-menu {
 	    -webkit-justify-content: initial;
@@ -499,20 +505,60 @@ MEDIA QUERIES
 
 /*** TABLETS ***/
 @media (max-width: 414px) {
-
+	
+	.main-menu .menu-container {
+		padding: 0;
+		max-width: 100vw;
+	}
 	.menu-container > div{
 		flex-flow: column wrap;
 		flex-direction: column-reverse;
 	}
-
+	/*.main-menu .menu-item {
+	    width: calc(100% - 5em);
+	}*/
+	.main-menu-section-wrapper .flex {
+		-webkit-align-items: center;
+		align-items: center;
+	}
 	.child-menu.pac-menu {
 	    padding: 0em 0.5em 0.5em 1em;
 	}
+	.child-menu .menu-item a {
+		width: 100%;
+		text-align: center;
+	}
 	.side-menu {
-		-webkit-align-self: flex-end;
+		/*-webkit-align-self: flex-end;
 		align-self: flex-end;
 		-webkit-justify-content: unset;
-		justify-content: unset;
+		justify-content: unset;*/
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	.main-menu .menu-item a, .menu-search-item {
+	    /*width: calc(100% - 5em);*/
+	}
+	.main-menu .menu-item {
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+	.main-menu .menu-item .menu-btn {
+	    max-width: calc(100% - 5em);
+	}
+	.main-menu .menu-item a {
+		/*width: calc(100% - 5em);*/
+		/*display: inline-block;*/
+	}
+	.menu-search-item {
+		width: calc(100% - 5em);
+	}
+	.search-form input[type="text"] {
+	    width: 100%;
+	}
+	.show-search-btn {
+	    /*position: relative;*/
 	}
 	.secondary-options {
 		display: none;
