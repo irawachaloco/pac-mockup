@@ -29,9 +29,25 @@ function dropdownMenu() {
 		//$(this).parent().siblings().toggle();
 		if ( $(this).next('.sub-child-menu').length > 0 ) {
 			e.preventDefault();
+			if ($( window ).width() <= 1040) {
+				$('.sub-menu-btn').not(this).next('.sub-child-menu').slideToggle();
 
-			$('.sub-menu-btn').not(this).next('.sub-child-menu').slideUp();
-	    	$(this).next('.sub-child-menu').slideToggle();
+				if ( $(this).next('.sub-child-menu').children('.filter-menu').length > 0 ) {
+					$(this).next('.sub-child-menu').children('.filter-menu').slideToggle();
+				}
+				if ( $(this).next('.sub-child-menu').children('.filter-menu').length === 0 ) {
+					$(this).next('.sub-child-menu').slideToggle();
+				}
+				// $(this).next('.sub-child-menu').slideToggle();
+	    		
+	    		
+			}
+			if ($( window ).width() >= 1040) {
+				$('.sub-menu-btn').not(this).next('.sub-child-menu').slideUp();
+	    		$(this).next('.sub-child-menu').slideToggle();
+			}
+
+			
 		}
 
 	});
@@ -40,7 +56,7 @@ function dropdownMenu() {
 			$(this).parent().siblings().toggle();
 		}
 		if ($( window ).width() >= 1040) {
-			
+
 		}
 		if ( $(this).next('.child-menu').length > 0 ) {
 			e.preventDefault();
