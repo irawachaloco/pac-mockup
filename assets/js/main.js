@@ -16,6 +16,7 @@ function mobileMenuButton() {
 	});
 }
 
+
 function dropdownMenu() {
 	$(".filter-menu-btn").click(function(e){
 		if ( $(this).next('.filter-menu').length > 0 ) {
@@ -25,11 +26,14 @@ function dropdownMenu() {
 		} 
 	});
 	$(".sub-menu-btn").click(function(e){
+		$(this).parent().siblings().toggle();
 		if ( $(this).next('.sub-child-menu').length > 0 ) {
 			e.preventDefault();
+
 			$('.sub-menu-btn').not(this).next('.sub-child-menu').slideUp();
 	    	$(this).next('.sub-child-menu').slideToggle();
-		} 
+		}
+
 	});
 	$(".menu-btn").click(function(e){
 		if ( $(this).next('.child-menu').length > 0 ) {
@@ -39,13 +43,23 @@ function dropdownMenu() {
 		} 
 	});
 }
+// function hideTabs() {
+// 	$(".filter-menu-btn").click(function(e){
+// 		$('.sub-menu-btn').not(this).hide();
+// 	});
+// }
+
 
 function searchInput() {
-	$(".search-form").hide();
-	$(".show-search-btn").click(function(e){
-		$(this).toggleClass("active");
-		$(".search-form").animate({width: 'toggle'});
-	});
+	if ($( window ).width() >= 1040) {
+		$(".search-form").hide();
+		$(".show-search-btn").click(function(e){
+			$(this).toggleClass("active");
+			$(".search-form").animate({width: 'toggle'});
+		});
+	}
+
+	
 }
 
 // ======== PLUGINS ========
@@ -63,7 +77,7 @@ function initScrollMagic() {
 	.setPin(".menu-wrapper")
 	.addTo(controller)
 
-	if ($( window ).width() >= 1024) {
+	if ($( window ).width() >= 1040) {
 	// do some magic
 	var fixSideBar = new ScrollMagic.Scene({
 		triggerElement: ".fixed-side-section", 

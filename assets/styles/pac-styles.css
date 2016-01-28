@@ -100,6 +100,8 @@ a { text-decoration: none;}
 	left: 0;
 	/*bottom:0;*/
 	bottom: calc(-50% + 2px - 2.6em);
+	padding: 1em;
+	box-sizing: border-box;
 }
 .child-menu  .menu-item{
 	/*position: relative;*/
@@ -154,6 +156,7 @@ a { text-decoration: none;}
 	width: 100%;
 	z-index:2;
 }
+
 .search-form {
 	position: relative;
 	z-index: 1;
@@ -189,10 +192,20 @@ a { text-decoration: none;}
 }
 .search-form input[type="text"] {
     padding: .2em;
+    padding: 0.25em;
+	line-height: 2em;
+	border: 2px solid;
 }
+.search-form input[type="text"]:focus {
+    border-color: #D3D3D3;
+	outline: 5px none #D3D3D3;
+}
+
+
 .search-form input[type=submit]:hover {
 	text-decoration: underline;
 }
+
 .search-form::after {
 	content: "";
 	position: absolute;
@@ -439,7 +452,7 @@ MEDIA QUERIES
 	}
 
 	.sub-child-menu {
-		display: block;
+		/*display: block;*/
 		/*height: 100%;*/
 	}
 	.child-menu {
@@ -456,6 +469,13 @@ MEDIA QUERIES
 	.main-menu .menu-item {
 		padding-bottom: .25em;
 	}
+	.show-search-btn {
+		position: absolute;
+	}
+	.search-form,
+	.search-form input[type="text"] {
+	    width: 100%;
+	}
 	.pac-main-column {
 	    max-width: 100%;
 	    padding-right: 0;
@@ -463,6 +483,7 @@ MEDIA QUERIES
 	.pac-side-section {
 		padding-bottom: 3em;
 	}
+
 }
 @media (max-width: 768px) {
 	.logo-item {

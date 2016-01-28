@@ -596,9 +596,9 @@ input[type=text] {
     border-radius: 0;
 }
 input[type=text]:focus {
-	border-color:cadetblue;
+	border-color:lightgrey;
 	outline: 5px;
-	outline-color:cadetblue;
+	outline-color:lightgrey;
 }
 
 input[type=submit] {
