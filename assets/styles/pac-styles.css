@@ -11,7 +11,7 @@ h1 {
 	/*text-transform: uppercase;*/
 }
 h2 {
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	line-height: 1.15em;
 	letter-spacing: .05em;
 	font-weight: 600;
@@ -19,7 +19,7 @@ h2 {
 }
 h3 {
 	font-size: .937em;
-	line-height: 1.5em;
+	line-height: 1.4em;
 	/*color: grey;*/
 	font-weight: normal;
 	/*text-transform: uppercase;*/
@@ -27,6 +27,18 @@ h3 {
 
 a { text-decoration: none;}
 
+input[type=submit] {
+    /* padding: 5px 15px; */
+    background: black;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    color: white;
+}
+form > * {
+    padding: .5em;
+}
 .droid-font {
 	font-family: 'Droid Serif', serif;
 	font-size: .9em;
@@ -36,7 +48,7 @@ a { text-decoration: none;}
 }
 .source-serif-font,
 .source-serif-font > p {
-	font-size: 1.125em;
+	font-size: 16px;
 	font-family: 'Source Serif Pro', serif;
 	text-align: left;
 	letter-spacing: 0.03em;
@@ -146,6 +158,19 @@ a { text-decoration: none;}
 .main-menu .menu-btn {
 	border: 2px solid;
 }
+.main-menu .menu-btn.active,
+.main-menu .menu-btn:hover {
+	border: 2px solid;
+	background: black;
+	color: white;
+	border-color: black;
+} 
+.sub-menu-btn:hover,
+.sub-menu-btn.active,
+.secondary-options .menu-item:hover {
+	color: blue;
+}
+
 .menu-item a,
 .menu-search-item { 
 	text-transform: capitalize;
@@ -165,6 +190,7 @@ a { text-decoration: none;}
 .menu-wrapper {
 	width: 100%;
 	z-index:2;
+	background: white;
 }
 
 .search-form {
@@ -225,6 +251,9 @@ a { text-decoration: none;}
 .secondary-menu .menu-item {
 	font-weight: 600;
 }
+.secondary-options {
+	margin-left:1em;
+}
 
 .footer {
 	background-color: white;
@@ -254,6 +283,7 @@ a { text-decoration: none;}
 
 
 .category-label {
+	font-family: 'Karla', sans-serif;
 	color:lightgrey;
 	font-size: 0.937em;
 	letter-spacing: .05em;
@@ -289,6 +319,8 @@ a { text-decoration: none;}
 	height: 30vh;
 	background: grey;
 	color: white;
+	padding: 0 2em;
+    box-sizing: border-box;
 	/*background-size: cover; */
 }
 
@@ -324,7 +356,7 @@ a { text-decoration: none;}
 }
 
 .square-text-hidden {
-	font-size: .75em;
+	/*font-size: .75em;*/
 }
 
 /*** Icons & images ***/
@@ -429,6 +461,10 @@ a { text-decoration: none;}
 .slick-prev::before {
 	content: "‹" !important;
 }
+
+.grid-number-label {
+	font-size: 1.8em;
+}
 /****************************
 MEDIA QUERIES
 ****************************/
@@ -504,6 +540,9 @@ MEDIA QUERIES
 	.search-form,
 	.search-form input[type="text"] {
 	    width: 100%;
+	}
+	.secondary-options {
+		margin-left: 0;
 	}
 	.pac-main-column {
 	    max-width: 100%;

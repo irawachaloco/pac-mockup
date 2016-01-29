@@ -203,6 +203,7 @@ FLEX MODULE
 
 /*** Text ***/
 .p-spacing p ~ p { padding-top: 1.5em; }
+p ~ p { padding-top: 1em; }
 p:empty, span:empty { display: none; }
 .text-right {
 	text-align: right;
@@ -418,7 +419,7 @@ BOXED CONTENTS
 .full-screen {
 	min-height: 100vh;
 	min-width: 100%;
-	p/*osition: relative;*/
+	/*osition: relative;*/
 }
 .full-content {
 	width: 100%;

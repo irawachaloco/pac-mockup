@@ -46,7 +46,9 @@ function dropdownMenu() {
 				$('.sub-menu-btn').not(this).next('.sub-child-menu').slideUp();
 	    		$(this).next('.sub-child-menu').slideToggle();
 			}
-
+			$('.sub-menu-btn').not(this).removeClass('active');
+			$(this).toggleClass('active');
+			
 			
 		}
 
@@ -62,6 +64,7 @@ function dropdownMenu() {
 			e.preventDefault();
 			$('.menu-btn').not(this).next('.child-menu').slideUp();
 	    	$(this).next('.child-menu').slideToggle();
+	    	$(this).toggleClass('active');
 		} 
 	});
 	// $(".menu-btn").click(function(e){
