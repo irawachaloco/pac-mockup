@@ -660,7 +660,7 @@ form > * {
 	padding-bottom: 1em;
 }
 :focus {
-  background: inherit;
+ /* background: inherit;*/
   outline-color: lightgrey; 
 }
 /*input[type='checkbox']:checked + label{
