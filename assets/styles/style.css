@@ -200,6 +200,7 @@ p:empty, span:empty { display: none; }
 .upper { text-transform: uppercase; }
 .capitalize { text-transform: capitalize; }
 .italic { font-style: italic; }
+.bold { font-weight: bold; }
 .underline { text-decoration: underline; }
 .text_align-center { text-align: center; }
 .text_align-right { text-align: right; }
