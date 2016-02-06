@@ -110,6 +110,9 @@ CUSTOM STYLES
 	z-index: 20;
 	box-sizing: border-box;
 }
+.sub-menu-btn:hover ~ .sub-child-menu {
+	display: block;
+}
 .filter-menu {
 	border: 1px solid;
 	border-width: 2px 0 0 0;
